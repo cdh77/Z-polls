@@ -1,7 +1,7 @@
 # poll-app
 ### A poll app made by following the official django tutorial.
 
-[GitPod]()
+[GitPod](https://gitpod.io/#https://github.com/cdh77/poll-app)
 
 __*Python3 & pip3 Should be installed*__
 
