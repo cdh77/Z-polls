@@ -5,6 +5,16 @@ body {
   background-color: #ffffff;
 }
 
-.header-padding {
+.header-tile {
     padding: 30px 30px 30px 30px;
+    margin: 20px 20px 20px 20px;
+}
+
+.margin-home {
+    margin: 20px 20px 20px 20px;
+}
+
+.is-primary {
+    border-width: 5px;
+    border-radius: 5px;
 }

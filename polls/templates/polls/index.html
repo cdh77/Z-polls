@@ -12,29 +12,36 @@
       type="text/css"
       href="{% static 'polls/styles.css' %}"
     />
-<div class="header-padding">
-<nav class="level">
-  <p class="level-item has-text-centered">
-    <a class="link is-info">Home</a>
-  </p>
-  <p class="level-item has-text-centered">
-    <a class="link is-info">Menu</a>
-  </p>
-  <p class="level-item has-text-centered">
-    <img src="https://bulma.io/images/bulma-type.png" alt="" style="height: 30px;">
-  </p>
-  <p class="level-item has-text-centered">
-    <a class="link is-info">Reservations</a>
-  </p>
-  <p class="level-item has-text-centered">
-    <a class="link is-info">Contact</a>
-  </p>
+<div class="margin-home">
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="http://127.0.0.1:8000/polls">
+    <h1 class="title">
+      Polls
+    </h1>
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="http://127.0.0.1:8000/admin">
+        Admin-site
+      </a>
+
+    </div>
+  </div>
 </nav>
 </div>
    
-  </section >
+  <section class="content">
     {% if latest_question_list %}
-    <ul>
+    <ol>
       {% for question in latest_question_list %}
       <li>
         <a href="{% url 'polls:detail' question.id %}"
@@ -42,9 +49,10 @@
         >
       </li>
       {% endfor %}
-    </ul>
+    </ol>
     {% else %}
     <p>No polls are available.</p>
     {% endif %}
+    </section>
   </body>
 </html>
