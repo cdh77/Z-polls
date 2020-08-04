@@ -1,18 +1,42 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
     <title>Results</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'polls/styles.css' %}"
+    />
 </head>
 <body>
-<h1>{{ question.question_text }}</h1>
-
+<div class="tile is-ancestor header-tile">
+  <div class="tile is-vertical is-4 ">
+    <div class="tile">
+      <div class="tile is-parent is-vertical">
+        <article class="tile is-child notification is-primary">
+<h1 class="title">Results</h1>
+<h2 class="subtitle">{{ question.question_text }}</h2>
+<div class="content">
 <ul>
 {% for choice in question.choice_set.all %}
     <li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
 {% endfor %}
 </ul>
+</div>
 
-<a href="{% url 'polls:detail' question.id %}">Vote again?</a>
+<div class="buttons">
+    <a class="button is-danger" href="{% url 'polls:detail' question.id %}">
+    <strong>Vote again?</strong>
+    </a>
+</div>
+        </article>
+        </div>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>

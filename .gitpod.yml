@@ -1,2 +1,9 @@
 tasks:
   - init: pip install -r ./requirements.txt
+
+vscode:
+  extensions:
+    - esbenp.prettier-vscode@5.1.3:t532ajsImUSrA9N8Bd7jQw==
+    - ecmel.vscode-html-css@0.2.3:hh8R73s3n0g/eQ8EL9PatQ==
+    - magicstack.MagicPython@1.1.1:Q+4h8/d9eu9kME/nNfIDlg==
+    - batisteo.vscode-django@0.20.0:gUr2ptf5xx2Pcb6pNcYqgw==
