@@ -2,9 +2,9 @@ li a {
   color: green;
 }
 body {
-  background: white url("images/background.gif") repeat;
+  background-color: #ffffff;
 }
 
-h1 {
-  background-color: tomato;
+.header-padding {
+    padding: 30px 30px 30px 30px;
 }
