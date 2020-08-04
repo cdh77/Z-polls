@@ -4,7 +4,12 @@
   <head>
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
     <meta charset="UTF-8" />
-    <title>Polls</title>
+    <meta name="description" content="Free poll app">
+  <meta name="keywords" content="polls, cdh77, pythonanywhere">
+  <meta name="author" content="cdh77">
+    <meta name="google-site-verification" content="RrwLvpBJyCAAvXyMOJTSzPcDiIji1QjeG-ztNvNmkHA" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-Polls</title>
   </head>
   <body>
     <link
@@ -17,19 +22,19 @@
   <div class="navbar-brand">
     <a class="navbar-item" href="{% url 'polls:index' %}">
     <h1 class="title">
-      Polls
+      Z-Polls
     </h1>
     </a>
     <a class="navbar-item" href="{% url 'admin:index' %}">
     <h3 class="subtitle">
     Admin-site
     </h3>
-    
+
     </a>
   </div>
 </nav>
 </div>
-   
+
   <section class="content">
     {% if latest_question_list %}
     <ol>
