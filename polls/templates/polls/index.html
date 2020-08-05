@@ -34,7 +34,11 @@
   </div>
 </nav>
 </div>
-
+<div class="tile is-ancestor header-tile">
+  <div class="tile is-vertical ">
+    <div class="tile">
+      <div class="tile is-parent is-vertical">
+        <article class="tile is-child notification is-primary">
   <section class="content">
     {% if latest_question_list %}
     <ol>
@@ -50,5 +54,10 @@
     <p>No polls are available.</p>
     {% endif %}
     </section>
+            </article>
+        </div>
+    </div>
+  </div>
+</div>
   </body>
 </html>
