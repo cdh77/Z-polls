@@ -1,63 +1,69 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
-    <meta charset="UTF-8" />
-    <meta name="description" content="Free poll app">
+
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+  <meta charset="UTF-8" />
+  <meta name="description" content="Free poll app">
   <meta name="keywords" content="polls, cdh77, pythonanywhere">
   <meta name="author" content="cdh77">
-    <meta name="google-site-verification" content="RrwLvpBJyCAAvXyMOJTSzPcDiIji1QjeG-ztNvNmkHA" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Z-Polls</title>
-  </head>
-  <body>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{% static 'polls/styles.css' %}"
-    />
-<div class="margin-home">
-<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a class="navbar-item" href="{% url 'polls:index' %}">
-    <h1 class="title">
-      Z-Polls
-    </h1>
-    </a>
-    <a class="navbar-item" href="{% url 'admin:index' %}">
-    <h3 class="subtitle">
-    Admin-site
-    </h3>
+  <meta name="google-site-verification" content="RrwLvpBJyCAAvXyMOJTSzPcDiIji1QjeG-ztNvNmkHA" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Z-Polls</title>
+</head>
 
-    </a>
+<body>
+  <link rel="stylesheet" type="text/css" href="{% static 'polls/styles.css' %}" />
+  <div class="margin-home">
+    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="{% url 'polls:index' %}">
+          <h1 class="title">
+            Z-Polls
+          </h1>
+        </a>
+        <a class="navbar-item" href="{% url 'admin:index' %}">
+          <h3 class="subtitle">
+            Admin-site
+          </h3>
+        </a>
+        <a class="navbar-item" href="{% url 'accounts:login' %}">
+          <h5 class="subtitle">
+            Login
+          </h5>
+        </a>
+        <a class="navbar-item" href="{% url 'accounts:register' %}">
+          <h5 class="subtitle">
+            Register
+          </h5>
+        </a>
+      </div>
+    </nav>
   </div>
-</nav>
-</div>
-<div class="tile is-ancestor header-tile">
-  <div class="tile is-vertical ">
-    <div class="tile">
-      <div class="tile is-parent is-vertical">
-        <article class="tile is-child notification is-primary">
-  <section class="content">
-    {% if latest_question_list %}
-    <ol>
-      {% for question in latest_question_list %}
-      <li>
-        <a href="{% url 'polls:detail' question.id %}"
-          >{{ question.question_text }}</a
-        >
-      </li>
-      {% endfor %}
-    </ol>
-    {% else %}
-    <p>No polls are available.</p>
-    {% endif %}
-    </section>
-            </article>
+  <div class="tile is-ancestor header-tile">
+    <div class="tile is-vertical ">
+      <div class="tile">
+        <div class="tile is-parent is-vertical">
+          <article class="tile is-child notification is-primary">
+            <section class="content">
+              {% if latest_question_list %}
+              <ol>
+                {% for question in latest_question_list %}
+                <li>
+                  <a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a>
+                </li>
+                {% endfor %}
+              </ol>
+              {% else %}
+              <p>No polls are available.</p>
+              {% endif %}
+            </section>
+          </article>
         </div>
+      </div>
     </div>
   </div>
-</div>
-  </body>
+</body>
+
 </html>
