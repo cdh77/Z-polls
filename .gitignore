@@ -145,6 +145,7 @@ mobile.py
 
 # Text backup files
 *.bak
+.vscode/
 DS_Store
 **syncthing**
 **sync-conflict**
