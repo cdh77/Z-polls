@@ -38,6 +38,15 @@
             Register
           </h5>
         </a>
+        <a class="navbar-item" href="{% url 'accounts:logout' %}">
+          <h5 class="subtitle">
+            {% if user.is_authenticated %}
+            Logout
+            {% else %}
+            You aren't logged in!
+            {% endif %}
+          </h5>
+        </a>
       </div>
     </nav>
   </div>
