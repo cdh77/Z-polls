@@ -61,12 +61,14 @@
                 {% for question in latest_question_list %}
                 <li>
                   <a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a>
+                  <a href="{% url 'polls:add-choice' question.id %}">Add choices</a>
                 </li>
                 {% endfor %}
               </ol>
               {% else %}
               <p>No polls are available.</p>
               {% endif %}
+              <a href="{% url 'polls:add-question' %}">Add Question</a>
             </section>
           </article>
         </div>
