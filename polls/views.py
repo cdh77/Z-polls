@@ -1,8 +1,9 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
-from django.urls import reverse
-from django.views import generic
+from django.urls import reverse, reverse_lazy
 from django.utils import timezone
+from django.views import generic
 
 from .models import Choice, Question
 
@@ -63,3 +64,17 @@ def vote(request, question_id):
         # with POST data. This prevents data from being posted twice if a
         # user hits the Back button.
         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
+
+
+class AddQuestionView(LoginRequiredMixin, generic.CreateView):
+    model = Question
+    template_name = 'polls/add_questions.html'
+    fields = '__all__'
+    success_url = reverse_lazy('polls:index')
+
+
+class AddChoicesView(LoginRequiredMixin, generic.CreateView):
+    template_name = 'polls/add_choices.html'
+    model = Choice
+    fields = '__all__'
+    success_url = reverse_lazy('polls:index')
