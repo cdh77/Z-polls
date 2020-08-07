@@ -21,10 +21,9 @@ INSTALLED_APPS = [
     # User-defined apps
     'accounts.apps.AccountsConfig',
     'polls.apps.PollsConfig',
-<<<<<<< HEAD
+
+    # Django-Addons
     'crispy_forms',
-=======
->>>>>>> 0154829dfd0df3a5f0ea97e516df01808c6eb7d7
 ]
 
 MIDDLEWARE = [
