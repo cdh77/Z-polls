@@ -74,7 +74,20 @@
             You aren't logged in!
             {% endif %}
           </h5>
+<<<<<<< HEAD
         </div>
+=======
+        </a>
+        <a class="navbar-item" href="{% url 'accounts:logout' %}">
+          <h5 class="subtitle">
+            {% if user.is_authenticated %}
+            Logout
+            {% else %}
+            You aren't logged in!
+            {% endif %}
+          </h5>
+        </a>
+>>>>>>> 0154829dfd0df3a5f0ea97e516df01808c6eb7d7
       </div>
     </div>
   </div>

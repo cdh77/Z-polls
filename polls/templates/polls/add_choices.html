@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% load static %}
 {% load crispy_forms_tags %}
 <!DOCTYPE html>
@@ -36,3 +37,10 @@
 </body>
 
 </html>
+=======
+<form method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">Add choices</button>
+</form>
+>>>>>>> 0154829dfd0df3a5f0ea97e516df01808c6eb7d7
