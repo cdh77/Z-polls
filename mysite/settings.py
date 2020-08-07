@@ -5,7 +5,7 @@ SECRET_KEY = '=c6g#q%nxm_czsba7bclcd0ws_p0o1azta8)+k302##6ohl1e1'
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['cdh77.pythonanywhere.com', '127.0.0.1']
+ALLOWED_HOSTS = ['cdh77.pythonanywhere.com', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -21,6 +21,7 @@ INSTALLED_APPS = [
     # User-defined apps
     'accounts.apps.AccountsConfig',
     'polls.apps.PollsConfig',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -100,3 +101,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static"),
 
 LOGIN_URL = 'accounts:login'
 LOGIN_REDIRECT_URL = 'polls:index'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
