@@ -1,2 +1,6 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
 You were logged out!
 <a href="{% url 'polls:index' %}">Home Page</a>
+{% endblock %}

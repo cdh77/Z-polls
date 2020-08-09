@@ -1,45 +1,32 @@
+{% extends "base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
-    <title>Details</title>
-        <link
-      rel="stylesheet"
-      type="text/css"
-      href="{% static 'polls/styles.css' %}"
-    />
-</head>
-<body>
+{% block content %}
 <div class="tile is-ancestor header-tile">
   <div class="tile is-vertical ">
     <div class="tile">
       <div class="tile is-parent is-vertical">
         <article class="tile is-child notification is-primary">
-            <h1 class="title">{{ question.question_text }}</h1>
+          <h1 class="title">{{ question.question_text }}</h1>
 
-            {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+          {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
-            <form action="{% url 'polls:vote' question.id %}" method="post">
+          <form action="{% url 'polls:vote' question.id %}" method="post">
             {% csrf_token %}
             {% for choice in question.choice_set.all %}
-                <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
-                <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
+            <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
+            <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
             {% endfor %}
-            <br/>
+            <br />
             <div class="buttons">
-                <button class="button is-warning" type="submit" value="Vote">Vote</button>
-                <a class="button is-link" href="{% url 'polls:index'%}">
+              <button class="button is-warning" type="submit" value="Vote">Vote</button>
+              <a class="button is-link" href="{% url 'polls:index'%}">
                 <strong>Home</strong>
-                </a>
+              </a>
             </div>
-            </form>
+          </form>
         </article>
-        </div>
+      </div>
     </div>
   </div>
 </div>
-</body>
-</html>
+{% endblock %}
