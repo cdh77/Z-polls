@@ -1,10 +1,11 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponseRedirect
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse, reverse_lazy
 from django.utils import timezone
 from django.views import generic
 
+from .forms import ChoiceForm, QuestionForm
 from .models import Choice, Question
 
 
@@ -59,7 +60,8 @@ def vote(request, question_id):
         # Always return an HttpResponseRedirect after successfully dealing
         # with POST data. This prevents data from being posted twice if a
         # user hits the Back button.
-        return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
+        return HttpResponseRedirect(reverse('polls:results',
+                                            args=(question.id,)))
 
 
 class AddQuestionView(LoginRequiredMixin, generic.CreateView):
@@ -74,3 +76,29 @@ class AddChoicesView(LoginRequiredMixin, generic.CreateView):
     model = Choice
     fields = '__all__'
     success_url = reverse_lazy('polls:index')
+
+
+def add_questions_choices_view(request):
+    question_form = QuestionForm()
+    choice_form = ChoiceForm()
+    if request.method == 'POST':
+        question_form = QuestionForm(request.POST)
+        choice_form = ChoiceForm(request.POST)
+        if question_form.is_valid() and choice_form.is_valid():
+            question = question_form.save(commit=False)
+            choice = choice_form.save(commit=False)
+            choice.question = question
+            question.save()
+            choice.save()
+            return redirect('polls:index')
+        else:
+            return render(
+                request, 'polls/new_question.html',
+                {'choice_form': choice_form, 'question_form': question_form}
+            )
+    else:
+        # Request method is GET
+        return render(
+            request, 'polls/new_question.html',
+            {'choice_form': choice_form, 'question_form': question_form}
+        )

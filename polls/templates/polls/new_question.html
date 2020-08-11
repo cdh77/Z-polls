@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+{% load crispy_forms_tags %}
+<form method="POST">
+    {% csrf_token %}
+    {{ question_form|crispy }}
+    {{ choice_form|crispy }}
+    <button type="submit" class="button is-light is-primary">Add</button>
+</form>
+{% endblock %}
