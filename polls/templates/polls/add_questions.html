@@ -3,12 +3,11 @@
 {% block content %}
 {% load crispy_forms_tags %}
 <div class="field margin">
-  <h2 class="title jumbotron">Add Question</h2>
+  <h2 class="title hero">Add Question</h2>
   <form method="post" class="uniForm">
     {% csrf_token %}
     {{ form|crispy }}
-
-    <button type="submit" class="btn btn-primary">Add Question</button>
+    <button type="submit" class="button is-primary">Add Question</button>
   </form>
 </div>
 {% endblock %}

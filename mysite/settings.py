@@ -24,6 +24,7 @@ INSTALLED_APPS = [
 
     # Django-Addons
     'crispy_forms',
+    'django_crispy_bulma',
 ]
 
 MIDDLEWARE = [
@@ -103,4 +104,13 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static"),
 
 LOGIN_URL = 'accounts:login'
 LOGIN_REDIRECT_URL = 'polls:index'
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = (
+    "bootstrap",
+    "uni_form",
+    "bootstrap3",
+    "bootstrap4",
+    "bulma",
+)
+
+CRISPY_TEMPLATE_PACK = "bulma"
