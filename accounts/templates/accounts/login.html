@@ -1,10 +1,25 @@
+
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
 {% load crispy_forms_tags %}
+<section class="hero is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Login
+      </h1>
+      <h2 class="subtitle">
+        Welcome back
+      </h2>
+    </div>
+  </div>
+</section>
 <form method="POST">
     {% csrf_token %}
     {{ form|crispy }}
-    <button type="submit">Login</button>
+    <button type="submit" class="button is-light is-primary">Login</button>
 </form>
+</br>
+<div>New around here? <a href="{% url 'accounts:register' %}" class="link">Register<a></div>
 {% endblock %}
