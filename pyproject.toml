@@ -2,7 +2,7 @@
 name = "z-polls"
 version = "0.1.0"
 description = ""
-authors = ["IgnisDa <diptesh.choudhuri@gmail.com>"]
+authors = ["IgnisDa <ignisda2002@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
