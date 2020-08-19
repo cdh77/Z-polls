@@ -1,12 +1,13 @@
 {% extends "base.html" %}
 {% load static %}
-{% block content %}
 {% load crispy_forms_tags %}
+{% load bulma_tags %}
+{% block content %}
 <div class="field margin">
   <h2 class="title hero">Add Question</h2>
   <form method="post" class="uniForm">
     {% csrf_token %}
-    {{ form|crispy }}
+    {{ form|bulma }}
     <button type="submit" class="button is-primary">Add Question</button>
   </form>
 </div>

@@ -2,6 +2,7 @@
 {% load static %}
 {% block content %}
 {% load crispy_forms_tags %}
+{% load bulma_tags %}
 <section class="hero is-light">
   <div class="hero-body">
     <div class="container">
@@ -16,7 +17,7 @@
 </section>
 <form method="POST">
     {% csrf_token %}
-    {{ form|crispy }}
+    {{ form|bulma }}
     <button type="submit" class="button is-light is-primary">Register</button>
 </form>
 </br>
