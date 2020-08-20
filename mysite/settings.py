@@ -24,7 +24,7 @@ INSTALLED_APPS = [
 
     # Django-Addons
     'crispy_forms',
-    'django_crispy_bulma',
+    'bulma',
 ]
 
 MIDDLEWARE = [
