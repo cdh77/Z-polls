@@ -1,11 +1,10 @@
 {% extends "base.html" %}
-{% load static %}
-{% block content %}
-{% load crispy_forms_tags %}
+{% load bulma_tags %}
+{% load static %}{% load crispy_forms_tags %}
 {% block content %}
 <form method="POST">
     {% csrf_token %}
-    {{ question_form|bumla }}
+    {{ question_form|bulma }}
     {{ choice_form|bulma }}
     <button type="submit" class="button is-light is-primary">Add</button>
 </form>
