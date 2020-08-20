@@ -74,8 +74,16 @@ class AddQuestionView(LoginRequiredMixin, generic.CreateView):
 class AddChoicesView(LoginRequiredMixin, generic.CreateView):
     template_name = 'polls/add_choices.html'
     model = Choice
-    fields = '__all__'
+    fields = ('choice_text',)
     success_url = reverse_lazy('polls:index')
+
+    def form_valid(self, form):
+        qsn_id = self.kwargs.get('pk')
+        question = Question.objects.get(pk=qsn_id)
+        choice = form.save(commit=False)
+        choice.question = question
+        choice.save()
+        return super().form_valid(form)
 
 
 def add_questions_choices_view(request):
