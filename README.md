@@ -5,6 +5,10 @@
 
 [Open Site hosted on pythonanywhere](https://cdh77.pythonanywhere.com/polls)
 
+Author: @cdh77
+
+Contributors: @IgnisDa
+<hr>
 
 MIT License
 
