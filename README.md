@@ -4,3 +4,8 @@
 ### A poll app made with BULMA and Django
 
 [Open Site hosted on pythonanywhere](https://cdh77.pythonanywhere.com/polls)
+
+
+MIT License
+
+Copyright (c) 2020 cdh77
