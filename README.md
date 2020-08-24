@@ -5,9 +5,9 @@
 
 [Open Site hosted on pythonanywhere](https://cdh77.pythonanywhere.com/polls)
 
-Author: @cdh77
+Author: [@cdh77](https://github.com/polls)
 
-Contributors: @IgnisDa
+Contributors: [IgnisDa](https://github.com/polls)
 <hr>
 
 MIT License
