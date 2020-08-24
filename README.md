@@ -5,11 +5,13 @@
 
 [Open Site hosted on pythonanywhere](https://cdh77.pythonanywhere.com/polls)
 
+## Team
+
 Author: [@cdh77](https://github.com/polls)
 
-Contributors: [IgnisDa](https://github.com/polls)
-<hr>
+Contributors: [@IgnisDa](https://github.com/polls)
 
+## License
 MIT License
 
 Copyright (c) 2020 cdh77
