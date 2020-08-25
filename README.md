@@ -14,4 +14,4 @@ Contributors: [@IgnisDa](https://github.com/polls)
 ## License
 MIT License
 
-Copyright (c) 2020 cdh77
+Copyright © 2020 cdh77
