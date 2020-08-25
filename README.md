@@ -3,7 +3,30 @@
 # Z-polls
 ### A poll app made with BULMA and Django
 
-[Open Site hosted on pythonanywhere](https://cdh77.pythonanywhere.com/polls)
+[Open Site hosted on pythonanywhere(has bugs)](https://cdh77.pythonanywhere.com/polls)
+
+### Getting Started
+
+Make sure you're using python3 (preferably 3.8, 3.7, 3.6) and have pip installed.
+
+Now install the development dependencies(Django, Bulma):
+
+```
+cd Z-polls
+python3 -m venv {your-venv-name}
+source {your-venv-name}/bin/activate
+pip install -r requirements.txt
+```
+
+To start Development server:
+
+```
+python3 manage.py migrate
+python3 manage.py runserver
+```
+
+Then enter the link provided by your terminal in your browser.
+
 
 ## Team
 
