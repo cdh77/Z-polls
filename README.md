@@ -36,9 +36,9 @@ Then enter the link provided by your terminal in your browser.
 
 ## Team
 
-Author: [@cdh77](https://github.com/polls)
+Author: [@cdh77](https://github.com/cdh77)
 
-Contributors: [@IgnisDa](https://github.com/polls)
+Contributors: [@IgnisDa](https://github.com/IgnisDa)
 
 ## License
 MIT License
