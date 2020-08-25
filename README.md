@@ -8,6 +8,7 @@
 ### Contributing guidelines
 
 [CONTRIBUTING](https://github.com/cdh77/Z-polls/blob/master/CONTRIBUTING.md)
+
 [CODE OF CONDUCT](https://github.com/cdh77/Z-polls/blob/master/CODE_OF_CONDUCT.md)
 
 ### Getting Started
