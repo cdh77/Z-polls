@@ -5,6 +5,10 @@
 
 [Open Site hosted on pythonanywhere(has bugs)](https://cdh77.pythonanywhere.com/polls)
 
+### Contributing guidelines
+
+[CONTRIBUTING.md](https://github.com/cdh77/Z-polls/blob/master/CONTRIBUTING.md)
+
 ### Getting Started
 
 Make sure you're using python3 (preferably 3.8, 3.7, 3.6) and have pip installed.
