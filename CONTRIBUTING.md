@@ -36,7 +36,7 @@ python3 manage.py migrate
 python3 manage.py runserver
 ```
 
-Then Goto the link provided by your terminal in yout browser.
+Then enter the link provided by your terminal in your browser.
 
 To Create Super User (for exploring purposes):-
 
@@ -71,7 +71,7 @@ GitHub search makes it easy to use labels for finding groups of issues or pull r
 The labels are loosely grouped by their purpose, but it's not required that every issue have a label from every group or that an issue can't have more than one label from the same group.
 
 Please open an issue on cdh77/Z-polls if you have suggestions for new labels, and if you notice some labels are missing on some repositories, then please open an issue on that repository.
-
+<hr>
 References:-
 * [Python Docs](https://docs.python.org/)
 * [Django docs](https://docs.djangoproject.com/en/)
