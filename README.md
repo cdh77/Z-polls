@@ -3,7 +3,7 @@
 # Z-polls
 ### A poll app made with BULMA and Django
 
-[Open Site hosted on pythonanywhere(has bugs)](https://cdh77.pythonanywhere.com/polls)
+[Site hosted on pythonanywhere(has bugs)](https://cdh77.pythonanywhere.com/polls)
 
 ### Contributing guidelines
 
