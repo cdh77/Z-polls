@@ -31,7 +31,7 @@ python3 manage.py migrate
 python3 manage.py runserver
 ```
 
-Then enter the link provided by your terminal in your browser.
+Then enter the link provided by your terminal into your browser.
 
 
 ## Team
