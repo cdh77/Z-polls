@@ -3,7 +3,7 @@
 # Z-polls
 ### A poll app made with [![Bulma](https://img.shields.io/badge/Bulma-v0.7.0-blue)](https://bulma.io) and [![Django](https://img.shields.io/badge/Django-v3.0.9-brightgreen)](https://www.djangoproject.com/)
 
-[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/cdh77/Z-polls/blob/master/LICENSE.md)
 
 [Site hosted on pythonanywhere(has bugs)](https://cdh77.pythonanywhere.com/polls)
 
