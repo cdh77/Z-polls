@@ -1,9 +1,12 @@
-[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/cdh77/poll-app)
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/cdh77/poll-app) 
+
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/cdh77/Z-polls/blob/master/LICENSE)
+
+[![GitHub issues](https://img.shields.io/github/issues/cdh77/Z-polls)](https://github.com/cdh77/Z-polls/issues)
+
 
 # Z-polls [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://www.python.org)
 ### A poll app made with [![Bulma](https://img.shields.io/badge/Bulma-v0.7.0-blue)](https://bulma.io) and [![Django](https://img.shields.io/badge/Django-v3.0.9-brightgreen)](https://www.djangoproject.com/)
-
-[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/cdh77/Z-polls/blob/master/LICENSE)
 
 [Site hosted on pythonanywhere(has bugs)](https://cdh77.pythonanywhere.com/polls)
 
